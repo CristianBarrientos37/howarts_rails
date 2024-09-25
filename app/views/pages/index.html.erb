@@ -1,2 +1,27 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<h1 class="d-flex justify-content-center py-3">Howarts</h1>
+
+
+
+<table class="table table-success table-striped">
+
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Character </th>
+      <th scope="col">Location</th>
+      <th scope="col">House</th>
+    </tr>
+  </thead>
+
+  <tbody >
+    <% @character.each do |r| %>
+        <tr>
+            <th  scope="row"><%= r.id %></th>
+            <td><%= r.name%></td>
+            <td><%= r.location%></td>
+            <td><%= r.house%></td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
